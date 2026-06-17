@@ -10,22 +10,31 @@ The focus is on practical troubleshooting skills used in real server and cloud e
 
 ## Current Topics
 
+### Network Basics
+
+- [Networking Fundamentals](01-network-basics/networking-fundamentals.md)
+
 ### Linux Network Commands
 
 - [Basic Linux Network Commands](02-linux-network-commands/basic-network-commands.md)
 
 ## Skills Covered
 
+- Basic networking fundamentals
+- OSI model simplified view
+- IP address and private IP ranges
+- Subnets and CIDR basics
+- Gateway and routing basics
+- DNS basics
+- TCP and UDP basics
+- Network ports
+- Firewall basics
+- VPC, public subnet, private subnet
+- Load balancer basics
 - Network interface inspection
-- IP address checking
 - Routing table inspection
 - Listening port inspection
-- DNS troubleshooting
-- Internet connectivity testing
-- TCP port connectivity testing
-- Linux firewall basics
-- AWS networking basics
-- Server troubleshooting playbooks
+- Connectivity troubleshooting
 
 ## Security Note
 
@@ -47,6 +56,7 @@ Do not publish real:
 ~~~text
 linux-network-skills-lab/
 ├── 01-network-basics/
+│   └── networking-fundamentals.md
 ├── 02-linux-network-commands/
 │   └── basic-network-commands.md
 ├── 03-troubleshooting-playbooks/
@@ -59,3 +69,7 @@ linux-network-skills-lab/
 ## Learning Goal
 
 Build strong practical confidence in Linux networking and troubleshooting for production infrastructure.
+
+## Note
+
+This repository covers basic fundamentals and practical troubleshooting notes. Networking is a large topic, so deeper learning should continue through official documentation, practical labs, vendor guides, and trusted technical resources.
