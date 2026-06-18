@@ -231,7 +231,9 @@ For basic troubleshooting, remember this simplified view:
 
 | Layer | Name | Example |
 |---|---|---|
-| Layer 7 | Application | HTTP, HTTPS, DNS |
+| Layer 7 | Application | HTTP, HTTPS, DNS, SSH |
+| Layer 6 | Presentation | TLS/SSL, encryption, data formatting |
+| Layer 5 | Session | Session handling, connection state |
 | Layer 4 | Transport | TCP, UDP, ports |
 | Layer 3 | Network | IP address, routing |
 | Layer 2 | Data Link | MAC address, switching |
@@ -241,11 +243,24 @@ Practical troubleshooting mapping:
 
 | Problem | Layer to Check |
 |---|---|
-| Website not loading | DNS, HTTP, firewall, service |
+| Website not loading | DNS, HTTP/HTTPS, application service |
+| TLS/certificate issue | Presentation layer, certificate, encryption |
+| Login/session keeps expiring | Session/application layer |
 | Port not reachable | TCP/UDP, firewall, security group |
 | Server cannot reach internet | IP, route, gateway |
 | Server has no network | Interface, cable, Wi-Fi, NIC |
 | Domain not resolving | DNS |
+
+### Note
+
+In real-world Linux, DevOps, and cloud troubleshooting, Layers 5 and 6 are often discussed together with Layer 7 because modern applications usually handle sessions, encryption, and formatting inside the application stack.
+
+For example:
+
+- HTTPS uses HTTP at Layer 7 with TLS encryption commonly mapped to Layer 6.
+- Login sessions, cookies, and tokens are usually handled at the application/session level.
+- TCP/UDP port checks are usually Layer 4.
+- IP routing issues are Layer 3.
 
 ---
 
